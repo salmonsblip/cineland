@@ -1,50 +1,30 @@
-# Salmon's Lab — сайт
+A poster is the first frame of the film
 
-Одна страница, без сборки и без платных сервисов. Английский по умолчанию, русский — кнопкой RU или ссылкой с `#ru` на конце.
+Before anyone buys a ticket, they see the poster. On a cinema wall, in a streaming catalogue, as a thumbnail the size of a fingernail. For most people the poster is the film until the lights go down.
 
-## 1. Добавьте картинки
+We treat it that way.
 
-Пока файла нет, на его месте виден серый плейсхолдер с путём. Положите файлы с точно такими именами (JPG, длинная сторона ~1600 px, до 400 КБ; видео MP4 H.264 без звука, до 3–4 МБ, 6–10 сек):
+What we believe
 
-**img/posters/** — оригинальные постеры
-leclisse, lanotte, lavventura, desertorosso, offret, coffeeandcigarettes, pierrotlefou, permanentvacation, cuckoo, audition, anymart, machinist, masterandmargarita (всё `.jpg`)
+1. Every release deserves a new reason to be seen. A film from 1962 is not old to someone who has never watched it. A re-release is a premiere for a new audience, and its poster should speak to that audience, not to a museum.
 
-**img/loc/** — локализации
-paterson, donniedarko, thefall, memento, chao, theconversation, thestraightstory, theelephantman, ran, sirat
+2. Respect the film, not its old poster. The original artwork belongs to its time. We go back to the film itself: its frames, its colour, its mood. Then we make something that could only belong to this film.
 
-**img/cases/** — coffee-banner.jpg (16:9), maywin-2.jpg, maywin-3.jpg (два других постера Maywin)
+3. A series is one voice. When four films by one director come out over a year, they should look like they know each other. A good system lets each poster be itself and still part of the whole.
 
-**video/** — reel-1…reel-4.mp4 (9:16), coffee-reel.mp4
+4. Localization is design, not translation. A title in another language has its own rhythm and its own shape. It deserves the same care as the original lettering, so the poster still feels whole in Stockholm, Moscow or anywhere else.
 
-**img/** — portrait.jpg (4:5), og.jpg (1200×630, превью ссылки в мессенджерах)
+5. The last banner matters as much as the first poster. A campaign lives in dozens of sizes: print, cinema screens, streaming tiles, phones. If the idea falls apart at 320×480, it was not finished.
 
-Порядок и подписи постеров меняются в `index.html`, в массивах `ORIG` и `LOC` внизу файла.
+6. Deadlines are part of the brief. Releases have dates. Files arrive named, layered and ready to hand to partners, on time.
 
-## 2. Выложите бесплатно (GitHub Pages)
+7. Fewer people between the idea and the result. You work directly with the person who designs your poster. For illustrated key art we bring in illustrators we trust.
 
-1. Войдите на github.com под `salmonsblip`.
-2. New repository → имя `salmonsblip.github.io` → Public → Create.
-3. «uploading an existing file» → перетащите всё содержимое этой папки (кроме body.html и README.md) → Commit.
-4. Settings → Pages → Source: Deploy from branch, `main`, `/ (root)` → Save. Через 1–2 минуты сайт открыт.
+What we make
+Original key art for releases and re-releases
+Poster localization for new territories
+Full release kits: print, web, cinema chains, streaming, social
+Motion: reels, animated posters, titles for trailers
+Have a release coming up?
 
-Домен salmonslab.com: файл `CNAME` уже лежит в папке. В Pages → Custom domain впишите `salmonslab.com` → Save, после проверки DNS включите Enforce HTTPS.
-
-DNS в Рег.ру (раздел «DNS-серверы и управление зоной», серверы Рег.ру не менять):
-
-| Тип | Имя | Значение |
-|---|---|---|
-| A | @ | 185.199.108.153 |
-| A | @ | 185.199.109.153 |
-| A | @ | 185.199.110.153 |
-| A | @ | 185.199.111.153 |
-| CNAME | www | salmonsblip.github.io |
-
-Старые A-записи на @ и записи для www (парковка Рег.ру) удалить.
-
-Альтернатива без Git: Cloudflare Pages или Netlify Drop — перетащить папку в браузер.
-
-## 3. Перед рассылкой
-
-- Проверить сайт с телефона по ссылке из письма.
-- Попросить у ИНОЕКИНО и Maywin одну-две фразы рекомендации — добавлю блок.
-- Заменить «Salmon» на настоящее имя, если будете выступать под ним.
+Send the film title, the territory and the release date to salmonslab@gmail.com.
