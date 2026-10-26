@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Salmon's Lab — film marketing design: original key art, poster localization and full release kits for film distributors.">
+<meta property="og:title" content="Salmon's Lab — key art and release kits for film distributors">
+<meta property="og:description" content="Original posters, poster localization and every format a release needs. Clients: Inoekino (Russia), Maywin Media (Sweden).">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/og.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23D9644C'/%3E%3Ctext x='16' y='23' font-family='Arial' font-weight='700' font-size='18' text-anchor='middle' fill='white'%3ESL%3C/text%3E%3C/svg%3E">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Salmon's Lab</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@600;800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: a light table of key art — posters with print crop marks, specs in mono, a billing block to close. */
+:root{
+  --paper:#EDEFF0; --ink:#15171A; --muted:#5B6168; --line:#C7CBCF; --slot:#DADDE0; --salmon:#D9644C; --on-salmon:#FFFFFF;
+  --f-display:"Fira Sans Extra Condensed","Arial Narrow",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --s1:.75rem; --s2:1rem; --s3:1.5rem; --s4:2.5rem; --s5:4rem; --s6:6rem;
+  --maxw:1200px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#111214;--ink:#ECEDEE;--muted:#9AA0A7;--line:#2B2E33;--slot:#1C1E21;--salmon:#EE8069;--on-salmon:#111214;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#111214;--ink:#ECEDEE;--muted:#9AA0A7;--line:#2B2E33;--slot:#1C1E21;--salmon:#EE8069;--on-salmon:#111214;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--salmon);outline-offset:3px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:760px){.wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+
+/* language switch */
+html:not([data-lang]) [lang="ru"]:not(html),html[data-lang="en"] [lang="ru"]:not(html),html[data-lang="ru"] [lang="en"]:not(html){display:none!important}
+
+.mono{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--f-display);font-weight:800;line-height:.95;letter-spacing:-.005em;text-wrap:balance;margin:0;text-transform:uppercase}
+h2{font-size:clamp(2.25rem,5vw,3.75rem)}
+h3{font-size:1.75rem;font-weight:600;line-height:1.05}
+p{margin:0;max-width:62ch}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:var(--s3);padding-block:.8rem}
+.mark{font-family:var(--f-display);font-weight:800;font-size:1.5rem;text-transform:uppercase;text-decoration:none;letter-spacing:.01em;white-space:nowrap}
+.mark b{color:var(--salmon);font-weight:800}
+nav.links{display:flex;gap:var(--s3);margin-left:auto}
+nav.links a{text-decoration:none;font-size:.9rem;color:var(--muted)}
+nav.links a:hover{color:var(--ink)}
+.lang{display:flex;border:1px solid var(--line);border-radius:2px;overflow:hidden;flex-shrink:0}
+.lang button{all:unset;cursor:pointer;font-family:var(--f-mono);font-size:.75rem;padding:.3rem .55rem;color:var(--muted)}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+@media (max-width:720px){nav.links{display:none}.lang{margin-left:auto}}
+
+/* hero */
+.hero{padding-block:var(--s5) var(--s4)}
+.hero h1{font-size:clamp(3rem,9.5vw,8.25rem);max-width:13ch}
+.hero h1 em{font-style:normal;color:var(--salmon)}
+.hero-row{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s3);margin-top:var(--s4);align-items:end}
+@media (min-width:900px){.hero-row{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}}
+.lede{font-size:1.15rem;max-width:44ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:var(--s1);margin-top:var(--s3)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.95rem;text-decoration:none;padding:.8rem 1.15rem;border:1px solid var(--ink);border-radius:2px;cursor:pointer;background:none;color:var(--ink);font-family:var(--f-body)}
+.btn.solid{background:var(--salmon);border-color:var(--salmon);color:var(--on-salmon)}
+.btn:hover{transform:translateY(-1px)}
+.hero-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s2)}
+
+/* poster slot with crop marks */
+.slot{position:relative;aspect-ratio:27/40;max-width:100%;background:var(--slot);isolation:isolate}
+.slot::before,.slot::after{content:"";position:absolute;width:12px;height:12px;border-color:var(--ink);border-style:solid;opacity:.55;pointer-events:none}
+.slot::before{top:-7px;left:-7px;border-width:1px 0 0 1px}
+.slot::after{bottom:-7px;right:-7px;border-width:0 1px 1px 0}
+.slot img,.slot video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.slot .ph{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:.7rem;font-family:var(--f-display);font-weight:800;text-transform:uppercase;line-height:.95;font-size:clamp(.95rem,1.6vw,1.35rem);color:var(--muted)}
+.slot .ph span{font-family:var(--f-mono);font-weight:400;font-size:.62rem;letter-spacing:.06em;text-transform:none;word-break:break-all}
+.slot.wide{aspect-ratio:16/9}
+.slot.tall{aspect-ratio:9/16}
+
+/* credits strip */
+.credits{border-block:1px solid var(--line)}
+.credits .wrap{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);padding-block:var(--s3);align-items:baseline}
+.credits strong{font-family:var(--f-display);font-size:1.4rem;text-transform:uppercase;font-weight:600}
+.credits div{display:flex;flex-direction:column;gap:.15rem}
+
+section.block{padding-block:var(--s6) 0}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s2);margin-bottom:var(--s4)}
+@media (min-width:900px){.sec-head{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:end}}
+
+/* work */
+.tabs{display:flex;gap:.25rem;flex-wrap:wrap;margin-bottom:var(--s3)}
+.tabs button{all:unset;cursor:pointer;padding:.5rem .9rem;border:1px solid var(--line);border-radius:2px;font-size:.9rem;color:var(--muted)}
+.tabs button[aria-selected="true"]{border-color:var(--ink);color:var(--ink);font-weight:600}
+.tabs button:focus-visible{outline:2px solid var(--salmon)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s4) var(--s3)}
+@media (min-width:640px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:1000px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+figure{margin:0;display:flex;flex-direction:column;gap:.6rem;min-width:0}
+figcaption{display:flex;flex-direction:column;gap:.15rem}
+figcaption .t{font-weight:600;line-height:1.25}
+.motion{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s3);margin-top:var(--s4)}
+@media (min-width:760px){.motion{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+/* cases */
+.case{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s3);padding-block:var(--s4);border-top:1px solid var(--line)}
+@media (min-width:900px){.case{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--s4)}}
+.case dl{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s2);margin:var(--s3) 0 0}
+.case dt{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.case dd{margin:.2rem 0 0;max-width:58ch}
+.case-media{display:grid;gap:var(--s2);align-content:start}
+.case-media.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.case-media.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.case-media.coffee{grid-template-columns:minmax(0,1fr) minmax(0,.68fr)}
+.case-media.coffee .wide{grid-column:1/-1}
+@media (max-width:520px){.case-media.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.deliv{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:var(--s2)}
+.deliv span{font-family:var(--f-mono);font-size:.7rem;border:1px solid var(--line);padding:.2rem .45rem;border-radius:2px;color:var(--muted)}
+
+/* services */
+.svc{display:grid;grid-template-columns:minmax(0,1fr);gap:0;border-top:1px solid var(--ink)}
+@media (min-width:900px){.svc{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.svc article{padding:var(--s3) 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:var(--s1)}
+@media (min-width:900px){.svc article{padding:var(--s3) var(--s3) var(--s3) 0}.svc article+article{padding-left:var(--s3);border-left:1px solid var(--line)}}
+.svc ul{margin:0;padding-left:1.1rem;color:var(--muted)}
+.svc li{margin:.15rem 0}
+.svc .best{margin-top:auto;padding-top:var(--s1);font-size:.9rem}
+.also{margin-top:var(--s3);color:var(--muted);max-width:none}
+
+/* process */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s3);counter-reset:s}
+@media (min-width:760px){.steps{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.steps li{counter-increment:s;display:flex;flex-direction:column;gap:.4rem;padding-top:var(--s2);border-top:1px solid var(--line)}
+.steps li::before{content:counter(s,decimal-leading-zero);font-family:var(--f-mono);font-size:.75rem;color:var(--salmon)}
+.steps b{font-weight:600}
+.steps span{color:var(--muted);font-size:.95rem}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s4)}
+@media (min-width:900px){.about{grid-template-columns:minmax(0,4fr) minmax(0,8fr);align-items:start}}
+.portrait{aspect-ratio:4/5;max-width:360px;width:100%}
+.about-text{display:flex;flex-direction:column;gap:var(--s2);font-size:1.05rem}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:var(--s2);margin-top:var(--s2)}
+.facts div{border-top:1px solid var(--line);padding-top:.6rem;display:flex;flex-direction:column;gap:.2rem}
+
+/* contact */
+.contact{margin-top:var(--s6);background:var(--ink);color:var(--paper)}
+.contact .wrap{padding-block:var(--s5)}
+.contact h2{font-size:clamp(2.5rem,7vw,5.5rem)}
+.contact .mono{color:color-mix(in srgb,var(--paper) 65%,var(--ink))}
+.mail{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2);margin-top:var(--s3)}
+.mail a{font-family:var(--f-display);font-weight:600;font-size:clamp(1.6rem,4.5vw,2.75rem);text-decoration-color:var(--salmon);text-underline-offset:.15em;user-select:all;overflow-wrap:anywhere}
+.contact .btn{border-color:var(--paper);color:var(--paper)}
+.brief{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s3);margin-top:var(--s4)}
+@media (min-width:900px){.brief{grid-template-columns:minmax(0,6fr) minmax(0,6fr)}}
+.brief ol{margin:.5rem 0 0;padding-left:1.2rem}
+.brief li{margin:.2rem 0}
+.copied{font-family:var(--f-mono);font-size:.75rem;color:var(--salmon)}
+
+/* billing block footer */
+footer{background:var(--ink);color:var(--paper);border-top:1px solid color-mix(in srgb,var(--paper) 18%,var(--ink))}
+footer .wrap{padding-block:var(--s4);display:flex;flex-direction:column;gap:var(--s2)}
+.billing{font-family:var(--f-display);font-weight:600;text-transform:uppercase;font-size:.95rem;line-height:1.15;letter-spacing:.02em;text-align:center;opacity:.75;max-width:60rem;margin:0 auto;text-wrap:balance}
+.billing b{font-weight:800;font-size:1.25em}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s1);font-family:var(--f-mono);font-size:.72rem;opacity:.6}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top">Salmon's <b>Lab</b></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#work"><span lang="en">Work</span><span lang="ru">Работы</span></a>
+      <a href="#cases"><span lang="en">Cases</span><span lang="ru">Кейсы</span></a>
+      <a href="#services"><span lang="en">Services</span><span lang="ru">Услуги</span></a>
+      <a href="#about"><span lang="en">About</span><span lang="ru">Обо мне</span></a>
+      <a href="#contact"><span lang="en">Contact</span><span lang="ru">Контакты</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" id="lang-en" data-set="en" aria-pressed="true">EN</button>
+      <button type="button" id="lang-ru" data-set="ru" aria-pressed="false">RU</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <p class="mono"><span lang="en">Film marketing design studio</span><span lang="ru">Дизайн-студия кинорекламы</span></p>
+      <h1 style="margin-top:var(--s2)">
+        <span lang="en">Key art and release kits for <em>film distributors</em></span>
+        <span lang="ru">Постеры и рекламные пакеты для <em>кинопрокатчиков</em></span>
+      </h1>
+      <div class="hero-row">
+        <div>
+          <p class="lede" lang="en">Original posters, poster localization and every format a release needs, from the 70×100 print file to cinema-chain banners and vertical reels. Built around your release calendar.</p>
+          <p class="lede" lang="ru">Оригинальные постеры, локализация и все форматы, которые нужны релизу: от печатного файла 70×100 до баннеров для киносетей и вертикальных рилсов. Под ваш график релизов.</p>
+          <div class="cta-row">
+            <a class="btn solid" href="#contact"><span lang="en">Discuss a release</span><span lang="ru">Обсудить релиз</span></a>
+            <a class="btn" href="#work"><span lang="en">See the posters</span><span lang="ru">Смотреть постеры</span></a>
+          </div>
+        </div>
+        <div class="hero-strip" id="hero-strip"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="credits">
+    <div class="wrap">
+      <div><span class="mono"><span lang="en">Theatrical re-releases</span><span lang="ru">Повторный прокат</span></span><strong><span lang="en">Inoekino · Russia</span><span lang="ru">ИНОЕКИНО · Россия</span></strong></div>
+      <div><span class="mono"><span lang="en">Poster localization</span><span lang="ru">Локализация постеров</span></span><strong>Maywin Media · Sweden</strong></div>
+      <div><span class="mono"><span lang="en">Previously</span><span lang="ru">Ранее</span></span><strong>Wargaming · World of Warships</strong></div>
+    </div>
+  </div>
+
+  <section class="block" id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span lang="en">Selected work</span><span lang="ru">Работы</span></h2>
+        <p lang="en">Most of this work is for re-releases of auteur and classic cinema: Antonioni, Godard, Tarkovsky, Jarmusch, Lynch, Kurosawa. Each new poster has to stand next to decades of existing artwork and still give the audience a reason to go back to the cinema.</p>
+        <p lang="ru">Большая часть работ сделана для повторного проката авторского и классического кино: Антониони, Годар, Тарковский, Джармуш, Линч, Куросава. Новый постер должен выдержать соседство с десятилетиями существующих версий и дать зрителю повод снова прийти в кино.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Type of work">
+        <button type="button" role="tab" id="tab-orig" aria-selected="true" data-tab="orig"><span lang="en">Original key art</span><span lang="ru">Оригинальные постеры</span></button>
+        <button type="button" role="tab" id="tab-loc" aria-selected="false" data-tab="loc"><span lang="en">Localization</span><span lang="ru">Локализация</span></button>
+      </div>
+      <div class="grid" id="grid" role="tabpanel"></div>
+
+      <p class="mono" style="margin-top:var(--s5)"><span lang="en">Motion · reels and animated posters</span><span lang="ru">Моушен · рилсы и анимированные постеры</span></p>
+      <div class="motion" id="motion"></div>
+    </div>
+  </section>
+
+  <section class="block" id="cases">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span lang="en">Three releases up close</span><span lang="ru">Три релиза подробно</span></h2>
+        <p lang="en">A series, a full release kit and a foreign catalogue. Release dates are public; the posters are in use in cinemas, on streaming services and across film media.</p>
+        <p lang="ru">Серия, полный пакет релиза и зарубежный каталог. Даты релизов публичны, постеры используются в кинотеатрах, онлайн-кинотеатрах и в киномедиа.</p>
+      </div>
+
+      <article class="case">
+        <div>
+          <p class="mono"><span lang="en">Inoekino</span><span lang="ru">ИНОЕКИНО</span> · 2025–2026</p>
+          <h3 style="margin-top:.5rem"><span lang="en">The Antonioni cycle</span><span lang="ru">Цикл Антониони</span></h3>
+          <dl>
+            <div><dt><span lang="en">Task</span><span lang="ru">Задача</span></dt><dd lang="en">Four films re-released one by one over a year: La Notte, L'Avventura, Red Desert, L'Eclisse. Each needed its own poster, and together they had to read as one cycle.</dd><dd lang="ru">Четыре фильма выходят в повторный прокат по очереди в течение года: «Ночь», «Приключение», «Красная пустыня», «Затмение». Каждому нужен свой постер, а вместе они должны читаться как один цикл.</dd></div>
+            <div><dt><span lang="en">Solution</span><span lang="ru">Решение</span></dt><dd lang="en">One visual system for the series, with each poster built on its own film's imagery and mood.</dd><dd lang="ru">Единая визуальная система для серии, а каждый постер строится на образах и настроении своего фильма.</dd></div>
+            <div><dt><span lang="en">Released</span><span lang="ru">Релизы</span></dt><dd lang="en">October 2025 · March 2026 · April 2026 · September 2026</dd><dd lang="ru">Октябрь 2025 · март 2026 · апрель 2026 · сентябрь 2026</dd></div>
+          </dl>
+          <div class="deliv"><span>key art</span><span>print 70×100</span><span>web</span><span>cinema chains</span><span>streaming</span><span>reels 9×16</span></div>
+        </div>
+        <div class="case-media four" id="case-antonioni"></div>
+      </article>
+
+      <article class="case">
+        <div>
+          <p class="mono"><span lang="en">Inoekino</span><span lang="ru">ИНОЕКИНО</span> · 2026</p>
+          <h3 style="margin-top:.5rem"><span lang="en">Coffee and Cigarettes: one release, every format</span><span lang="ru">«Кофе и сигареты»: один релиз, все форматы</span></h3>
+          <dl>
+            <div><dt><span lang="en">Task</span><span lang="ru">Задача</span></dt><dd lang="en">A new poster for Jim Jarmusch's film and the full set of materials for its return to cinemas on 20 August 2026.</dd><dd lang="ru">Новый постер к фильму Джима Джармуша и полный комплект материалов к его возвращению в кино 20 августа 2026 года.</dd></div>
+            <div><dt><span lang="en">Delivered</span><span lang="ru">Что сделано</span></dt><dd lang="en">Original poster, print-ready files, website banners, banners for cinema chains, venues and a streaming service, and vertical reels.</dd><dd lang="ru">Оригинальный постер, файлы для печати, баннеры для сайта, баннеры для киносетей, площадок и онлайн-кинотеатра, вертикальные рилсы.</dd></div>
+            <div><dt><span lang="en">Why it matters</span><span lang="ru">Почему это важно</span></dt><dd lang="en">The distributor deals with one person from the first concept to the last banner size, so the campaign stays consistent and nothing is lost between contractors.</dd><dd lang="ru">Прокатчик работает с одним человеком от первой идеи до последнего размера баннера: кампания остаётся цельной, ничего не теряется между подрядчиками.</dd></div>
+          </dl>
+          <div class="deliv"><span>Kinomax</span><span>Mosfilm</span><span>Aurora</span><span>Dom Kino</span><span>Yeltsin Center</span><span>Okko</span></div>
+        </div>
+        <div class="case-media coffee" id="case-coffee"></div>
+      </article>
+
+      <article class="case">
+        <div>
+          <p class="mono">Maywin Media · Sweden</p>
+          <h3 style="margin-top:.5rem"><span lang="en">A Swedish catalogue</span><span lang="ru">Каталог шведского дистрибьютора</span></h3>
+          <dl>
+            <div><dt><span lang="en">Task</span><span lang="ru">Задача</span></dt><dd lang="en">Posters for the Swedish market across the Maywin Media catalogue.</dd><dd lang="ru">Постеры для шведского рынка для всего каталога Maywin Media.</dd></div>
+            <div><dt><span lang="en">Scope</span><span lang="ru">Объём</span></dt><dd lang="en">An original poster for The Master and Margarita and Swedish versions of the posters for the other titles in the catalogue.</dd><dd lang="ru">Оригинальный постер «Мастера и Маргариты» и шведские версии постеров для остальных фильмов каталога.</dd></div>
+            <div><dt><span lang="en">How it started</span><span lang="ru">Как началось</span></dt><dd lang="en">A recommendation from Inoekino.</dd><dd lang="ru">По рекомендации ИНОЕКИНО.</dd></div>
+          </dl>
+        </div>
+        <div class="case-media three" id="case-maywin"></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span lang="en">What you can order</span><span lang="ru">Что можно заказать</span></h2>
+        <p lang="en">Priced per release after a short call or email. Regular clients get a standing rate for their release calendar.</p>
+        <p lang="ru">Стоимость считается под релиз после короткого звонка или письма. Для постоянных клиентов — фиксированные ставки под график релизов.</p>
+      </div>
+      <div class="svc">
+        <article>
+          <p class="mono">01</p>
+          <h3>Key Art</h3>
+          <p lang="en">A new poster for a release or re-release, starting from 2–3 concept directions.</p>
+          <p lang="ru">Новый постер к релизу или повторному прокату, начиная с 2–3 концептуальных направлений.</p>
+          <ul lang="en"><li>Concepts and final poster</li><li>Layered master file</li><li>Print-ready 70×100</li></ul>
+          <ul lang="ru"><li>Концепции и финальный постер</li><li>Послойный мастер-файл</li><li>Файл в печать 70×100</li></ul>
+          <p class="best mono"><span lang="en">For a film that needs a new face</span><span lang="ru">Когда фильму нужно новое лицо</span></p>
+        </article>
+        <article>
+          <p class="mono">02</p>
+          <h3>Localization Kit</h3>
+          <p lang="en">Your existing key art adapted for a new territory: title treatment, credits, release date.</p>
+          <p lang="ru">Существующий кейарт адаптирован под новую территорию: название, титры, дата релиза.</p>
+          <ul lang="en"><li>Localized title lettering</li><li>Print files</li><li>Core digital adaptations</li></ul>
+          <ul lang="ru"><li>Локализованное написание названия</li><li>Файлы для печати</li><li>Основные цифровые адаптации</li></ul>
+          <p class="best mono"><span lang="en">For acquired titles and catalogues</span><span lang="ru">Для купленных фильмов и каталогов</span></p>
+        </article>
+        <article>
+          <p class="mono">03</p>
+          <h3>Release Kit</h3>
+          <p lang="en">Key art or localization plus everything around it, delivered on your release schedule.</p>
+          <p lang="ru">Постер или локализация и всё вокруг, к дате вашего релиза.</p>
+          <ul lang="en"><li>Web and cinema-chain banners</li><li>Streaming / VOD artwork</li><li>Reels 9×16, animated poster</li></ul>
+          <ul lang="ru"><li>Баннеры для сайта и киносетей</li><li>Обложки для онлайн-кинотеатров</li><li>Рилсы 9×16, анимированный постер</li></ul>
+          <p class="best mono"><span lang="en">For distributors with a steady calendar</span><span lang="ru">Для прокатчиков с регулярным графиком</span></p>
+        </article>
+      </div>
+      <p class="also" lang="en">Also: titles and graphics for trailers, social media posts, presentation decks for buyers and partners.</p>
+      <p class="also" lang="ru">Также: титры и графика для трейлеров, посты для соцсетей, презентации для байеров и партнёров.</p>
+    </div>
+  </section>
+
+  <section class="block" id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span lang="en">How a release goes</span><span lang="ru">Как идёт работа</span></h2>
+        <p lang="en">Most releases take two to four weeks from materials to the last banner. Tighter dates are possible when planned ahead.</p>
+        <p lang="ru">Обычно от получения материалов до последнего баннера проходит 2–4 недели. Сжатые сроки возможны, если запланировать заранее.</p>
+      </div>
+      <ol class="steps">
+        <li><b lang="en">Materials</b><b lang="ru">Материалы</b><span lang="en">Stills, existing key art, logos, release date and territory.</span><span lang="ru">Кадры, существующий кейарт, логотипы, дата релиза и территория.</span></li>
+        <li><b lang="en">Concepts</b><b lang="ru">Концепции</b><span lang="en">Two or three directions to choose from.</span><span lang="ru">Два-три направления на выбор.</span></li>
+        <li><b lang="en">Final poster</b><b lang="ru">Финальный постер</b><span lang="en">Revisions on the chosen direction, approval with the rights holder if needed.</span><span lang="ru">Доработка выбранного направления, согласование с правообладателем при необходимости.</span></li>
+        <li><b lang="en">Adaptations</b><b lang="ru">Адаптации</b><span lang="en">Print, web, cinema chains, VOD, social formats.</span><span lang="ru">Печать, сайт, киносети, онлайн-кинотеатры, соцсети.</span></li>
+        <li><b lang="en">Delivery</b><b lang="ru">Сдача</b><span lang="en">Layered sources and named files, ready to hand to partners.</span><span lang="ru">Послойные исходники и понятно названные файлы, готовые для партнёров.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <div class="wrap about">
+      <div class="slot portrait" data-src="img/portrait.jpg" data-ph="Portrait|img/portrait.jpg"></div>
+      <div class="about-text">
+        <h2><span lang="en">Hi, I'm Salmon</span><span lang="ru">Привет, я Salmon</span></h2>
+        <p lang="en">I'm a designer and motion designer and I run Salmon's Lab. For Inoekino I design posters and full release materials for theatrical re-releases, often several films a month. For Maywin Media I localize posters for the Swedish market. Before film I made animated banners for social media and outdoor advertising at Wargaming, on World of Warships.</p>
+        <p lang="ru">Я дизайнер и моушен-дизайнер, веду Salmon's Lab. Для ИНОЕКИНО делаю постеры и полные комплекты материалов к повторному прокату, часто по несколько фильмов в месяц. Для Maywin Media локализую постеры для шведского рынка. До кино делал анимационные баннеры для соцсетей и наружной рекламы в Wargaming, на World of Warships.</p>
+        <p lang="en">You work with me directly. For illustrated key art I bring in illustrators I've worked with before.</p>
+        <p lang="ru">Вы работаете со мной напрямую. Для иллюстрированного кейарта подключаю проверенных художников.</p>
+        <div class="facts">
+          <div><span class="mono"><span lang="en">Format</span><span lang="ru">Формат</span></span><span lang="en">Remote, any time zone</span><span lang="ru">Удалённо, в любом часовом поясе</span></div>
+          <div><span class="mono"><span lang="en">Languages</span><span lang="ru">Языки</span></span><span lang="en">English, Russian</span><span lang="ru">Английский, русский</span></div>
+          <div><span class="mono"><span lang="en">Tools</span><span lang="ru">Инструменты</span></span><span>Photoshop, Figma, After Effects, Premiere</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <p class="mono"><span lang="en">Contact</span><span lang="ru">Контакты</span></p>
+      <h2 style="margin-top:var(--s2)"><span lang="en">Have a release coming up?</span><span lang="ru">Скоро релиз?</span></h2>
+      <div class="mail">
+        <a href="mailto:salmonslab@gmail.com" id="mail">salmonslab@gmail.com</a>
+        <button type="button" class="btn" id="copy"><span lang="en">Copy email</span><span lang="ru">Скопировать</span></button>
+        <span class="copied" id="copied" hidden><span lang="en">Copied</span><span lang="ru">Скопировано</span></span>
+      </div>
+      <div class="brief">
+        <div>
+          <p class="mono"><span lang="en">To get a quote within a day, send</span><span lang="ru">Чтобы получить оценку в течение дня, пришлите</span></p>
+          <ol lang="en"><li>Film title and a link to the trailer</li><li>Territory and release date</li><li>What you need: key art, localization or a full kit</li><li>Formats you already know you need</li></ol>
+          <ol lang="ru"><li>Название фильма и ссылку на трейлер</li><li>Территорию и дату релиза</li><li>Что нужно: постер, локализация или полный пакет</li><li>Форматы, которые точно понадобятся</li></ol>
+        </div>
+        <div>
+          <p class="mono"><span lang="en">Recommended by someone?</span><span lang="ru">Вас порекомендовали?</span></p>
+          <p style="margin-top:.5rem" lang="en">Mention who sent you in the first line. I'll reply with relevant examples and a rough estimate.</p>
+          <p style="margin-top:.5rem" lang="ru">Напишите в первой строке, кто вас направил. Отвечу примерами по вашей задаче и примерной оценкой.</p>
+          <p style="margin-top:var(--s2)"><a href="https://t.me/salmonslab" target="_blank" rel="noopener">t.me/salmonslab</a> <span class="mono">· Telegram</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="billing"><span lang="en">Salmon's Lab presents <b>key art</b> · localization · release kits · motion · for theatrical, streaming and physical releases · designed by Salmon · <b>in cinemas</b> near you</span><span lang="ru">Salmon's Lab представляет <b>постеры</b> · локализацию · рекламные пакеты · моушен · для кинопроката, онлайн-кинотеатров и физических изданий · дизайн Salmon · <b>скоро в кино</b></span></p>
+    <div class="foot"><span>© 2026 Salmon's Lab</span><span lang="en">Film titles and artwork belong to their rights holders.</span><span lang="ru">Права на фильмы и исходные материалы принадлежат правообладателям.</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Poster data. Put image files at the paths below; until then a placeholder shows.
+  var ORIG=[
+    {s:"leclisse",en:"L'Eclisse",ru:"Затмение",d:"Michelangelo Antonioni",r:"09.2026"},
+    {s:"lanotte",en:"La Notte",ru:"Ночь",d:"Michelangelo Antonioni",r:"10.2025"},
+    {s:"lavventura",en:"L'Avventura",ru:"Приключение",d:"Michelangelo Antonioni",r:"03.2026"},
+    {s:"desertorosso",en:"Red Desert",ru:"Красная пустыня",d:"Michelangelo Antonioni",r:"04.2026"},
+    {s:"offret",en:"The Sacrifice",ru:"Жертвоприношение",d:"Andrei Tarkovsky",r:"10.2026"},
+    {s:"coffeeandcigarettes",en:"Coffee and Cigarettes",ru:"Кофе и сигареты",d:"Jim Jarmusch",r:"08.2026"},
+    {s:"pierrotlefou",en:"Pierrot le Fou",ru:"Безумный Пьеро",d:"Jean-Luc Godard",r:"06.2026"},
+    {s:"permanentvacation",en:"Permanent Vacation",ru:"Отпуск без конца",d:"Jim Jarmusch",r:"12.2025"},
+    {s:"cuckoo",en:"One Flew Over the Cuckoo's Nest",ru:"Пролетая над гнездом кукушки",d:"Miloš Forman",r:"09.2025"},
+    {s:"audition",en:"Audition",ru:"Кинопроба",d:"Takashi Miike",r:"01.2026"},
+    {s:"anymart",en:"AnyMart",ru:"Вкускилл",d:"",r:"10.2026"},
+    {s:"machinist",en:"The Machinist",ru:"Машинист",d:"Brad Anderson",r:"2026"}
+  ];
+  var LOC=[
+    {s:"paterson",en:"Paterson",ru:"Патерсон",d:"Jim Jarmusch",r:"11.2026"},
+    {s:"donniedarko",en:"Donnie Darko",ru:"Донни Дарко",d:"Richard Kelly",r:"10.2026"},
+    {s:"thefall",en:"The Fall",ru:"Запределье",d:"Tarsem Singh",r:"07.2026"},
+    {s:"memento",en:"Memento",ru:"Мементо",d:"Christopher Nolan",r:"07.2026"},
+    {s:"chao",en:"ChaO",ru:"ЧаО",d:"Yasuhiro Aoki",r:"05.2026"},
+    {s:"theconversation",en:"The Conversation",ru:"Разговор",d:"Francis Ford Coppola",r:"05.2026"},
+    {s:"thestraightstory",en:"The Straight Story",ru:"Простая история",d:"David Lynch",r:"02.2026"},
+    {s:"theelephantman",en:"The Elephant Man",ru:"Человек-слон",d:"David Lynch",r:"11.2025"},
+    {s:"ran",en:"Ran",ru:"Ран",d:"Akira Kurosawa",r:"11.2025"},
+    {s:"sirat",en:"Sirāt",ru:"Сират",d:"Oliver Laxe",r:"10.2025"}
+  ];
+  var MOTION=["reel-1","reel-2","reel-3","reel-4"];
+
+  function slot(src,label,cls,video){
+    var d=document.createElement("div");d.className="slot"+(cls?" "+cls:"");
+    var ph=document.createElement("div");ph.className="ph";
+    ph.innerHTML="<div></div><span></span>";ph.firstChild.textContent=label;ph.lastChild.textContent=src;d.appendChild(ph);
+    var m=document.createElement(video?"video":"img");
+    if(video){m.muted=true;m.loop=true;m.playsInline=true;m.autoplay=true;m.setAttribute("preload","metadata");}
+    else{m.loading="lazy";m.decoding="async";m.alt=label;}
+    m.addEventListener("error",function(){m.remove();});
+    if(video){m.addEventListener("loadeddata",function(){ph.remove();});}else{m.addEventListener("load",function(){ph.remove();});}
+    m.src=src;d.appendChild(m);return d;
+  }
+  function card(f,dir){
+    var fig=document.createElement("figure");
+    fig.appendChild(slot("img/"+dir+"/"+f.s+".jpg",f.en));
+    var c=document.createElement("figcaption");
+    c.innerHTML='<span class="t"><span lang="en"></span><span lang="ru"></span></span><span class="mono"></span>';
+    c.querySelector('[lang="en"]').textContent=f.en;c.querySelector('[lang="ru"]').textContent=f.ru;
+    c.querySelector(".mono").textContent=(f.d?f.d+" · ":"")+f.r;
+    fig.appendChild(c);return fig;
+  }
+  var grid=document.getElementById("grid");
+  function show(tab){
+    grid.textContent="";
+    (tab==="loc"?LOC:ORIG).forEach(function(f){grid.appendChild(card(f,tab==="loc"?"loc":"posters"));});
+    document.querySelectorAll(".tabs button").forEach(function(b){b.setAttribute("aria-selected",b.dataset.tab===tab?"true":"false");});
+  }
+  document.querySelectorAll(".tabs button").forEach(function(b){b.addEventListener("click",function(){show(b.dataset.tab);});});
+  show("orig");
+
+  var hs=document.getElementById("hero-strip");
+  ["lanotte","lavventura","desertorosso","leclisse"].forEach(function(s){var f=ORIG.find(function(x){return x.s===s;});hs.appendChild(slot("img/posters/"+s+".jpg",f.en));});
+  var ca=document.getElementById("case-antonioni");
+  ["lanotte","lavventura","desertorosso","leclisse"].forEach(function(s){var f=ORIG.find(function(x){return x.s===s;});ca.appendChild(slot("img/posters/"+s+".jpg",f.en));});
+  var cc=document.getElementById("case-coffee");
+  cc.appendChild(slot("img/posters/coffeeandcigarettes.jpg","Poster"));
+  cc.appendChild(slot("video/coffee-reel.mp4","Reel 9×16","tall",true));
+  cc.appendChild(slot("img/cases/coffee-banner.jpg","Cinema banner","wide"));
+  var cm=document.getElementById("case-maywin");
+  [["img/posters/masterandmargarita.jpg","Mästaren och Margarita"],["img/cases/maywin-2.jpg","Bad Shabbos"],["img/cases/maywin-3.jpg","The Isle"]].forEach(function(x){cm.appendChild(slot(x[0],x[1]));});
+  var mo=document.getElementById("motion");
+  MOTION.forEach(function(s){mo.appendChild(slot("video/"+s+".mp4","Reel","tall",true));});
+  var p=document.querySelector(".portrait");p.replaceWith((function(){var s=slot("img/portrait.jpg","Portrait");s.classList.add("portrait");return s;})());
+
+  // language
+  function setLang(l){
+    document.documentElement.setAttribute("data-lang",l);
+    document.documentElement.lang=l;
+    document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.set===l?"true":"false");});
+    try{localStorage.setItem("sl-lang",l);}catch(e){}
+  }
+  var start="en";
+  try{var saved=localStorage.getItem("sl-lang");if(saved)start=saved;}catch(e){}
+  if(location.hash==="#ru")start="ru";else if(location.hash==="#en")start="en";
+  setLang(start);
+  document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){setLang(b.dataset.set);});});
+
+  // copy email
+  var copied=document.getElementById("copied");
+  document.getElementById("copy").addEventListener("click",function(){
+    var t="salmonslab@gmail.com";
+    function ok(){copied.hidden=false;setTimeout(function(){copied.hidden=true;},2000);}
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById("mail"));var s=getSelection();s.removeAllRanges();s.addRange(r);}
+    try{navigator.clipboard.writeText(t).then(ok,sel);}catch(e){sel();}
+  });
+})();
+</script>
+
+</body>
+</html>
