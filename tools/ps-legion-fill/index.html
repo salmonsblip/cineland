@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { padding: 10px 12px; color: var(--uxp-host-text-color); font-size: 12px; }
+  .row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+  .row > * { flex: 1; }
+  label.cap { display: block; margin: 10px 0 4px; color: var(--uxp-host-text-color-secondary); font-size: 11px; }
+  sp-textfield, sp-textarea, sp-picker { width: 100%; }
+  sp-textarea { height: 72px; }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+  .grid4 sp-textfield { width: 100%; }
+  .actions { display: flex; gap: 8px; margin-top: 14px; }
+  .actions sp-button { flex: 1; }
+  #status { margin-top: 10px; min-height: 32px; white-space: pre-wrap; }
+  #status.err { color: #ff6b6b; }
+  progress { width: 100%; height: 6px; margin-top: 6px; }
+  .hidden { display: none; }
+  .hint { color: var(--uxp-host-text-color-secondary); font-size: 10px; margin-top: 2px; }
+</style>
+</head>
+<body>
+  <label class="cap">Сервер ComfyUI (Legion)</label>
+  <div class="row">
+    <sp-textfield id="server" placeholder="http://192.168.1.50:8188"></sp-textfield>
+    <sp-button id="ping" variant="secondary" style="flex: 0 0 auto">Проверить</sp-button>
+  </div>
+
+  <label class="cap">Режим</label>
+  <sp-radio-group id="mode" selected="inpaint">
+    <sp-radio value="inpaint" checked>Инпейнт (выделение)</sp-radio>
+    <sp-radio value="outpaint">Аутпейнт (расширить)</sp-radio>
+  </sp-radio-group>
+
+  <div id="outpaintBox" class="hidden">
+    <label class="cap">Добавить по краям, px (слева · сверху · справа · снизу)</label>
+    <div class="grid4">
+      <sp-textfield id="mLeft" type="number" value="0"></sp-textfield>
+      <sp-textfield id="mTop" type="number" value="0"></sp-textfield>
+      <sp-textfield id="mRight" type="number" value="512"></sp-textfield>
+      <sp-textfield id="mBottom" type="number" value="0"></sp-textfield>
+    </div>
+    <label class="cap">Нахлёст на исходник, px</label>
+    <sp-textfield id="overlap" type="number" value="32"></sp-textfield>
+  </div>
+
+  <label class="cap">Промпт (что должно появиться; пусто — дорисовать по контексту)</label>
+  <sp-textarea id="prompt" placeholder="e.g. snowy embankment with old street lamps, evening light"></sp-textarea>
+
+  <div class="row" style="margin-top: 8px">
+    <div><label class="cap">Шаги</label><sp-textfield id="steps" type="number" value="24"></sp-textfield></div>
+    <div><label class="cap">Guidance</label><sp-textfield id="guidance" type="number" value="30"></sp-textfield></div>
+    <div><label class="cap">Варианты</label><sp-textfield id="batch" type="number" value="1"></sp-textfield></div>
+  </div>
+  <div class="row">
+    <div><label class="cap">Сид (-1 = случайный)</label><sp-textfield id="seed" type="number" value="-1"></sp-textfield></div>
+    <div><label class="cap">Мегапиксели</label><sp-textfield id="mp" type="number" value="1.0"></sp-textfield></div>
+  </div>
+  <div class="row">
+    <div><label class="cap">Контекст вокруг, %</label><sp-textfield id="context" type="number" value="40"></sp-textfield></div>
+    <div><label class="cap">Растушёвка маски, px</label><sp-textfield id="feather" type="number" value="12"></sp-textfield></div>
+  </div>
+  <sp-checkbox id="fp8">FP8-веса (быстрее, меньше VRAM)</sp-checkbox>
+
+  <div class="actions">
+    <sp-button id="run" variant="cta">Сгенерировать</sp-button>
+    <sp-button id="cancel" variant="secondary" disabled>Стоп</sp-button>
+  </div>
+  <progress id="bar" max="1" value="0" class="hidden"></progress>
+  <div id="status"></div>
+  <div class="hint">Модель: FLUX.1 Fill [dev] на Legion. Результат — новый слой с маской, исходник не трогается.</div>
+
+  <script src="main.js"></script>
+</body>
+</html>
